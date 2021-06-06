@@ -278,6 +278,7 @@ h6 { font-size: 16px }
 
 .post {
   border: 1px solid var(--borderColor);
+  border-radius: 5px;
   --webkit-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0,0.75);
   --moz-box-shadow: -2px 7px 21px -9px rgba(0,0,0,0,0.75);
   box-shadow: -2px 7px 21px -9px rgba(0,0,0,0,0.75);
@@ -285,9 +286,10 @@ h6 { font-size: 16px }
 
 .thumbnail {
   display: block;
-  width: 100%;
+  margin: 0 auto;
+  width: 80%;
   height: 180px;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .post-preview {
@@ -303,6 +305,21 @@ h6 { font-size: 16px }
 .post-intro {
   color: #4b5156;
   font-size: 16px;
+}
+
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid #3498db; /* Blue */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 20s linear infinite;
+  margin: 30px auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
 
 @media screen and (max-width: 1200px) {
